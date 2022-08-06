@@ -1,7 +1,7 @@
 import { getDataMovie } from 'api/getDataMovie';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { MovieData } from '../components/MovieData/MovieData';
+import { MovieData } from '../../components/MovieData/MovieData';
 
 export const MovieDetails = () => {
   const [data, setData] = useState([]);
