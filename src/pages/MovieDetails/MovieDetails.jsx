@@ -1,8 +1,8 @@
 import { getDataMovie } from 'api/getDataMovie';
 import { useEffect, useState } from 'react';
 import { useParams, Outlet, Link, useLocation } from 'react-router-dom';
-import { MovieData } from '../../components/MovieData/MovieData';
-import { MovieDetailAction } from '../../components/MovieDetailsAction/MovieDetailAction';
+import { MovieData } from '../../components/MovieData';
+import { MovieDetailAction } from '../../components/MovieDetailsAction';
 import styled from 'styled-components';
 
 const Button = styled.button`

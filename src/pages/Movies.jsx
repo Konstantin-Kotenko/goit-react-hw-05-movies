@@ -1,7 +1,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, Outlet } from 'react-router-dom';
-import { MoviesGallery } from 'components/MoviesGallery/MoviesGallery';
-import { Searchbar } from 'components/Searchbar/Searchbar';
+import { MoviesGallery } from 'components/MoviesGallery';
+import { Searchbar } from 'components/Searchbar';
 import { getMoviesByKey } from '../api/getMoviesByKey';
 
 const Movies = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getPopularMovies } from '../api/getPopularMovies';
-import { MoviesGallery } from '../components/MoviesGallery/MoviesGallery';
+import { MoviesGallery } from '../components/MoviesGallery';
 
 const Home = () => {
   const [data, setData] = useState([]);
