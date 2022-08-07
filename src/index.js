@@ -7,7 +7,7 @@ import { theme } from 'styleConfig/theme';
 import { ThemeProvider } from 'styled-components';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.StrictMode basename="/goit-react-hw-05-movies/">
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <App />
