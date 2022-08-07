@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getPopularMovies } from '../api/getPopularMovies';
 import { MoviesGallery } from '../components/MoviesGallery/MoviesGallery';
 
-export const Home = () => {
+const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,5 +11,11 @@ export const Home = () => {
     });
   }, []);
 
-  return <MoviesGallery movies={data} />;
+  return (
+    <>
+      <MoviesGallery movies={data} />
+    </>
+  );
 };
+
+export default Home;

@@ -1,18 +1,17 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCast } from '../../../api/getMovieCast';
 import { CastsList } from '../../../components/CastsList/CastsList';
 
-export const Cast = () => {
+const Cast = () => {
   const [casts, setCasts] = useState(null);
-  const { moviesId } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
-    getMovieCast(moviesId).then(data => {
+    getMovieCast(movieId).then(data => {
       setCasts(data.cast);
     });
-  }, [moviesId]);
+  }, [movieId]);
 
   return (
     <>
@@ -24,3 +23,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

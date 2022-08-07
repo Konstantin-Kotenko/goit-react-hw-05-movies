@@ -1,11 +1,26 @@
+import styled from 'styled-components';
+
+const List = styled.ul`
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+`;
+
+const Item = styled.li`
+  font-weight: 400;
+  &:not(: last-child) {
+    margin-right: 15px;
+  }
+`;
+
 export const Genres = ({ genres }) => {
   return (
-    <ul>
+    <List>
       {genres.map(({ id, name }) => (
-        <li key={id} id={id}>
+        <Item key={id} id={id}>
           {name}
-        </li>
+        </Item>
       ))}
-    </ul>
+    </List>
   );
 };
