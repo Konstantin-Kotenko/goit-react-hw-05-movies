@@ -1,5 +1,11 @@
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  text-align: center;
+`;
+
 const NotFound = () => {
-  return <h1>Not Found</h1>;
+  return <Title>Not Found</Title>;
 };
 
 export default NotFound;
