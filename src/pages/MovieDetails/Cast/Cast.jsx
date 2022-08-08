@@ -13,15 +13,7 @@ const Cast = () => {
     });
   }, [movieId]);
 
-  return (
-    <>
-      {casts && (
-        <>
-          <CastsList casts={casts} />
-        </>
-      )}
-    </>
-  );
+  return <>{casts && <CastsList casts={casts} />}</>;
 };
 
 export default Cast;

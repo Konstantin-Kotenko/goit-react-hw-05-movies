@@ -41,8 +41,8 @@ export const Searchbar = ({ onSubmit, value }) => {
   return (
     <Formik
       initialValues={{ query: value ?? '' }}
-      onSubmit={(value, { resetForm }) => {
-        onSubmit(value);
+      onSubmit={(values, { resetForm }) => {
+        onSubmit(values);
         resetForm();
       }}
     >

@@ -7,11 +7,6 @@ const Container = styled.div`
 `;
 
 const Link = styled(NavLink)`
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-`;
-const Button = styled.button`
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
@@ -29,6 +24,9 @@ const Button = styled.button`
   &:hover {
     opacity: 1;
   }
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 `;
 
 export const MovieDetailAction = () => {
@@ -37,10 +35,10 @@ export const MovieDetailAction = () => {
   return (
     <Container>
       <Link to={'cast'} state={{ from: location }}>
-        <Button>Cast</Button>
+        Cast
       </Link>
       <Link to={'reviews'} state={{ from: location }}>
-        <Button>Reviews</Button>
+        Reviews
       </Link>
     </Container>
   );

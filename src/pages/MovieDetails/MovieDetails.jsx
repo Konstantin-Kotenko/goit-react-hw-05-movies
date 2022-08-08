@@ -1,13 +1,14 @@
 import { getDataMovie } from 'api/getDataMovie';
 import { useEffect, useState } from 'react';
-import { useParams, Outlet, Link, useLocation } from 'react-router-dom';
+import { useParams, Outlet, NavLink, useLocation } from 'react-router-dom';
 import { MovieData } from '../../components/MovieData';
 import { MovieDetailAction } from '../../components/MovieDetailsAction';
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Link = styled(NavLink)`
   padding: 8px 16px;
   border-radius: 4px;
+  width: 150px;
   text-decoration: none;
   color: white;
   background-color: rgb(63, 81, 181);
@@ -40,9 +41,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={backLinkHref}>
-        <Button>Back to movies</Button>
-      </Link>
+      <Link to={backLinkHref}>Back to movies</Link>
       <MovieData movie={data} />
       <MovieDetailAction />
       <Outlet />

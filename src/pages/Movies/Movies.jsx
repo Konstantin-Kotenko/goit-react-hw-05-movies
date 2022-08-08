@@ -1,8 +1,8 @@
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams, Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { MoviesGallery } from 'components/MoviesGallery';
 import { Searchbar } from 'components/Searchbar';
-import { getMoviesByKey } from '../api/getMoviesByKey';
+import { getMoviesByKey } from '../../api/getMoviesByKey';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,11 +28,8 @@ const Movies = () => {
 
   return (
     <>
-      <Searchbar onSubmit={onFormSubmit} />
+      <Searchbar onSubmit={onFormSubmit} value={searchParams.get('name')} />
       <MoviesGallery movies={data} />
-      <Suspense fallback={<div>Loading subpage...</div>}>
-        <Outlet />
-      </Suspense>
     </>
   );
 };

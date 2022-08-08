@@ -13,15 +13,7 @@ const Reviews = () => {
     });
   }, [movieId]);
 
-  return (
-    <>
-      {reviews && (
-        <>
-          <ReviewsList reviews={reviews} />
-        </>
-      )}
-    </>
-  );
+  return <>{reviews && <ReviewsList reviews={reviews} />}</>;
 };
 
 export default Reviews;

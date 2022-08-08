@@ -21,7 +21,6 @@ const Span = styled.span`
 `;
 
 export const MovieData = ({ movie }) => {
-  console.log(movie);
   const { title, poster_path, vote_average, overview, genres, release_date } =
     movie;
   return (
