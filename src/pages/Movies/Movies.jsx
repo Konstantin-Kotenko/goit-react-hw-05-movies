@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import Notiflix from 'notiflix';
 import { MoviesGallery } from 'components/MoviesGallery';
 import { Searchbar } from 'components/Searchbar';
 import { getMoviesByKey } from '../../api/getMoviesByKey';
@@ -20,7 +21,7 @@ const Movies = () => {
 
   const onFormSubmit = value => {
     if (value.query === '') {
-      console.log('safasf');
+      Notiflix.Notify.failure('Please entry name');
     }
     const params = value.query !== '' ? { name: value.query } : {};
     setSearchParams(params);

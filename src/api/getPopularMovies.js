@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { api } from './api';
 
 export const getPopularMovies = async () => {
@@ -5,6 +6,6 @@ export const getPopularMovies = async () => {
     const { data } = await api.get('/trending/all/day');
     return data;
   } catch (e) {
-    console.log(e);
+    Notiflix.Notify.failure('Sorry please try again');
   }
 };

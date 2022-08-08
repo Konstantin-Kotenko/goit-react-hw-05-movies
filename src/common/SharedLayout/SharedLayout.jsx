@@ -11,7 +11,7 @@ const Container = styled.main`
   grid-gap: 16px;
 `;
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <>
       <Header>
@@ -28,3 +28,5 @@ export const SharedLayout = () => {
     </>
   );
 };
+
+export default SharedLayout;

@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { api } from './api';
 
 export const getMovieCast = async id => {
@@ -5,6 +6,6 @@ export const getMovieCast = async id => {
     const { data } = await api.get(`/movie/${id}/credits`);
     return data;
   } catch (e) {
-    console.log(e);
+    Notiflix.Notify.failure('Sorry please try again');
   }
 };

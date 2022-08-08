@@ -18,14 +18,14 @@ const Image = styled.img`
 export const CastsList = ({ casts }) => {
   return (
     <List>
-      {casts.map(cast => (
-        <li key={cast.id}>
+      {casts.map(({ id, profile_path, name, character }) => (
+        <li key={id}>
           <Image
-            src={`https://image.tmdb.org/t/p/w500` + cast.profile_path}
-            alt={cast.name}
+            src={`https://image.tmdb.org/t/p/w500` + profile_path}
+            alt={name}
           />
-          <p>{cast.name}</p>
-          <p>{cast.character}</p>
+          <p>{name}</p>
+          <p>{character}</p>
         </li>
       ))}
     </List>
